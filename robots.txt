@@ -1,0 +1,5 @@
+# Arquivo robots.txt para Basquete BR
+User-agent: *
+Allow: /
+
+Sitemap: https://www.basquetebr.com/sitemap.xml

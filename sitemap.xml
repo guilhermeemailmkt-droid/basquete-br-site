@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Sitemap gerado para o site Basquete BR. Este arquivo ajuda os motores de busca
+  a encontrar e indexar as páginas mais importantes. Atualize o domínio
+  conforme necessário quando o site estiver publicado.
+-->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.basquetebr.com/</loc>
+  </url>
+  <url>
+    <loc>https://www.basquetebr.com/noticias.html</loc>
+  </url>
+  <url>
+    <loc>https://www.basquetebr.com/opiniao.html</loc>
+  </url>
+  <url>
+    <loc>https://www.basquetebr.com/onde-assistir.html</loc>
+  </url>
+  <url>
+    <loc>https://www.basquetebr.com/contato.html</loc>
+  </url>
+  <url>
+    <loc>https://www.basquetebr.com/politica-de-privacidade.html</loc>
+  </url>
+  <url>
+    <loc>https://www.basquetebr.com/termos-de-uso.html</loc>
+  </url>
+</urlset>
