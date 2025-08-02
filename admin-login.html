@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login Administrativo – Basquete BR</title>
+  <meta name="description" content="Área de login para administradores do Basquete BR." />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <div class="container nav-bar">
+      <a href="index.html" class="logo">Basquete BR</a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+      </ul>
+    </div>
+  </header>
+  <section class="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1>Login Administrativo</h1>
+      <p>Acesse a área restrita para administrar o conteúdo do site.</p>
+    </div>
+  </section>
+  <div class="container">
+    <main>
+      <form id="loginForm" style="max-width: 400px; margin: 0 auto; background-color: var(--color-white); padding: 1.5rem; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.08);">
+        <div style="margin-bottom: 1rem;">
+          <label for="username" style="display:block;margin-bottom:0.3rem; font-weight:500;">Usuário</label>
+          <input type="text" id="username" name="username" required style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--color-grey); border-radius:4px;" />
+        </div>
+        <div style="margin-bottom: 1rem;">
+          <label for="password" style="display:block;margin-bottom:0.3rem; font-weight:500;">Senha</label>
+          <input type="password" id="password" name="password" required style="width:100%; padding:0.6rem 0.8rem; border:1px solid var(--color-grey); border-radius:4px;" />
+        </div>
+        <button type="submit" style="background-color: var(--color-red); color: var(--color-white); padding: 0.6rem 1.2rem; border: none; border-radius:4px; font-weight:600; cursor:pointer;">Entrar</button>
+      </form>
+    </main>
+  </div>
+  <footer>
+    <div class="footer-columns">
+      <div>
+        <h4>Contato</h4>
+        <ul>
+          <li><a href="mailto:guilherme@email.com">guilherme@email.com</a></li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+  <script>
+    // Script simples para simular login
+    document.getElementById('loginForm').addEventListener('submit', function (event) {
+      event.preventDefault();
+      const username = document.getElementById('username').value.trim().toLowerCase();
+      const password = document.getElementById('password').value.trim();
+      // Credenciais definidas pelo usuário: guilherme garcia / 3608260
+      if (username === 'guilherme garcia' || username === 'guilherme' ) {
+        if (password === '3608260') {
+          window.location.href = 'admin-dashboard.html';
+          return;
+        }
+      }
+      alert('Usuário ou senha incorretos.');
+    });
+  </script>
+</body>
+</html>
