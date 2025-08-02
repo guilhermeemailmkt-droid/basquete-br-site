@@ -1,0 +1,417 @@
+/*
+ * Site de notícias de NBA e basquete no Brasil
+ *
+ * Este arquivo contém a estilização base utilizada em todas as páginas
+ * do site. As cores, tipografia e layout foram pensados para refletir a
+ * identidade visual inspirada na NBA enquanto mantêm boa legibilidade
+ * e responsividade. Variables CSS são utilizadas para facilitar
+ * manutenção de cores e fontes.
+ */
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
+
+/* Definição de paleta de cores e tipografia */
+:root {
+  --color-dark-blue: #0B1E33;
+  --color-red: #D63324;
+  --color-white: #FFFFFF;
+  --color-light-grey: #F5F5F5;
+  --color-grey: #e5e5e5;
+  --font-title: 'Montserrat', sans-serif;
+  --font-body: 'Roboto', sans-serif;
+  --max-width: 1200px;
+}
+
+/* Reset básico para remover margens e paddings padrão */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.6;
+  background-color: var(--color-light-grey);
+  color: var(--color-dark-blue);
+}
+
+/* Containers e elementos de layout */
+.container {
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 0.5rem 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* Menu de navegação */
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.logo {
+  font-family: var(--font-title);
+  font-weight: 700;
+  font-size: 1.6rem;
+  color: var(--color-white);
+  text-decoration: none;
+}
+
+.menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.menu li {
+  position: relative;
+}
+
+.menu a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover {
+  color: var(--color-red);
+}
+
+/* Busca interna no header */
+.search-form {
+  position: relative;
+}
+
+.search-form input[type="text"] {
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+}
+
+.search-form button {
+  position: absolute;
+  right: 0.3rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: transparent;
+  border: none;
+  color: var(--color-dark-blue);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+/* Hero section */
+.hero {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background: url('../images/hero.png') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 2rem;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(11, 30, 51, 0.65);
+}
+
+.hero-content {
+  position: relative;
+  color: var(--color-white);
+  text-align: center;
+  z-index: 2;
+}
+
+.hero h1 {
+  font-family: var(--font-title);
+  font-size: 2.2rem;
+  margin-bottom: 0.8rem;
+}
+
+.hero p {
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Seções da home */
+.content-grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 2rem;
+}
+
+/* Cards de notícia */
+.card {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  margin-bottom: 1.5rem;
+}
+
+.card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 1rem;
+}
+
+.card-content h2 {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-dark-blue);
+}
+
+.card-content p {
+  font-size: 0.9rem;
+  color: var(--color-dark-blue);
+}
+
+.card-content a {
+  display: inline-block;
+  margin-top: 0.8rem;
+  color: var(--color-red);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.card-content a:hover {
+  text-decoration: underline;
+}
+
+/* Sidebar */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.sidebar .widget {
+  background-color: var(--color-white);
+  border-radius: 8px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.08);
+}
+
+.sidebar .widget h3 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  margin-bottom: 0.8rem;
+}
+
+.sidebar .widget ul {
+  list-style: none;
+}
+
+.sidebar .widget ul li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar .widget ul li a {
+  color: var(--color-dark-blue);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.sidebar .widget ul li a:hover {
+  color: var(--color-red);
+}
+
+/* Newsletter */
+.newsletter {
+  background-color: var(--color-red);
+  color: var(--color-white);
+  padding: 2rem 1rem;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.newsletter h3 {
+  font-family: var(--font-title);
+  font-size: 1.4rem;
+  margin-bottom: 0.5rem;
+}
+
+.newsletter p {
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.newsletter form {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.newsletter input[type="email"] {
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  width: 250px;
+}
+
+.newsletter button {
+  padding: 0.6rem 1.2rem;
+  background-color: var(--color-white);
+  color: var(--color-red);
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter button:hover {
+  background-color: #ffeeee;
+}
+
+/* Footer */
+footer {
+  background-color: var(--color-dark-blue);
+  color: var(--color-white);
+  padding: 2rem 0;
+  margin-top: 2rem;
+}
+
+/* Espaços para anúncios */
+.ad-slot {
+  width: 100%;
+  background-color: var(--color-grey);
+  border: 1px dashed var(--color-dark-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-dark-blue);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Variantes de tamanho para anúncios */
+.ad-top {
+  height: 90px;
+}
+.ad-middle {
+  height: 250px;
+}
+.ad-side {
+  height: 250px;
+}
+
+.footer-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 2rem;
+  width: 90%;
+  max-width: var(--max-width);
+  margin: 0 auto;
+}
+
+footer h4 {
+  font-family: var(--font-title);
+  margin-bottom: 0.8rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 0.4rem;
+}
+
+footer ul li a {
+  color: var(--color-white);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+footer ul li a:hover {
+  color: var(--color-red);
+  text-decoration: underline;
+}
+
+footer .social-links a {
+  display: inline-block;
+  margin-right: 0.8rem;
+  color: var(--color-white);
+  font-size: 1.4rem;
+  transition: color 0.3s ease;
+}
+
+footer .social-links a:hover {
+  color: var(--color-red);
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero {
+    height: 280px;
+  }
+  .nav-bar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  .menu {
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+  .search-form input[type="text"] {
+    width: 160px;
+  }
+}
+
+@media (max-width: 600px) {
+  .newsletter form {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+  .newsletter input[type="email"] {
+    width: 100%;
+  }
+  header {
+    padding: 0.7rem 0;
+  }
+  .hero h1 {
+    font-size: 1.6rem;
+  }
+  .hero p {
+    font-size: 0.85rem;
+  }
+}
